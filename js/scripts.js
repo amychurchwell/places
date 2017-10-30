@@ -27,13 +27,20 @@ $(document).ready(function(){
     var lastNameInput = $("input#lastname").val();
     var cityInput = $("input#city").val();
     var countryInput = $("input#country").val();
+    var notes = $("#notes").val();
 
     var newName = new Name (firstNameInput, lastNameInput);
     var newPlace = new Place (cityInput, countryInput);
 
-    $('#results').show();
-    $('#list').append(newName.fullName() + newPlace.fullPlace());
+    $("ul#names").append("<li><span class='clickable'>" + newName.fullName() + "</span></li>");
+
+    $(".clickable").last().click(function() {
+      $("#show-names").toggle();
+      $(".full-name").text(newName.fullName());
+      $(".place").text(newPlace.fullPlace());
+      $(".notes").text(notes);
 
 
+    });
   });
 });

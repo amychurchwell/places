@@ -35,7 +35,7 @@
             <div class="form-row space">
               <div class="col-md-12">
                 <label for="notes">Notes: </label>
-                <textarea type="text" name="notes"></textarea>
+                <textarea type="text" name="notes" id="notes"></textarea>
               </div>
             </div>
             <button type="submit" class="btn btn-secondary btn-block">Submit</button>
@@ -43,8 +43,16 @@
         </div>
         <div class="col-md-6">
           <h2>Earth places people have visited! <p class="text-muted">**earth only, please!</p></h2>
-          <div id="results">
-            <p id="list"></p>
+          <ul id="names">
+
+          </ul>
+          <div id="show-names" class="card">
+            <div class="card-body">
+              <p><h6 class="card-title">Full Name:</h6> <span class="full-name"></span></p>
+              <p><h6 class="card-title">Place Visited:</h6> <span class="place"></span></p>
+              <p><h6 class="card-title">When they visited:</h6> <span class="time"></span></p>
+              <p><h6 class="card-title">Notes about the trip:</h6> <span class="notes"></span></p>
+            </div>
           </div>
         </div>
       </div>

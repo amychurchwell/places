@@ -9,3 +9,7 @@ textarea{
 button{
   margin-top: 15px;
 }
+
+#show-names{
+  display: none;
+}
