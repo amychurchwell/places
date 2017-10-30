@@ -1,0 +1,11 @@
+div .space{
+  margin-top: 20px;
+}
+
+textarea{
+  width: inherit;
+}
+
+button{
+  margin-top: 15px;
+}

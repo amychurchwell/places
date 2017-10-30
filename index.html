@@ -10,21 +10,42 @@
   <body>
     <div class="container fluid">
       <div class="jumbotron fluid">
-        <h1 class="display-4">Where have you been?</h1>
-        <h3 class="text-muted">*on Earth only, please!</h3>
+        <h1 class="display-4">Where have <em>you</em> been?!</h1>
+        <h3 class="text-muted">**on Earth only, please!**</h3>
       </div>
       <div class="row">
         <div class="col-md-6">
           <form id="form">
-            <div class="form-group">
-              <label for="country">Country</label>
-              <input type="text" name="country">
-              <label for="country">City</label>
-              <input type="text" name="city">
-              <label for="country">Notes</label>
-              <textarea type="text" name="notes"></textarea>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstname">Name</label>
+                <input type="text" class="form-control" id="firstname">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" id="lastname">
+              </div>
             </div>
+            <div class="form-row">
+              <label for="country">City</label>
+              <input type="text" class="form-control" id="city">
+              <label for="country">Country</label>
+              <input type="text" class="form-control" id="country">
+            </div>
+            <div class="form-row space">
+              <div class="col-md-12">
+                <label for="notes">Notes: </label>
+                <textarea type="text" name="notes"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-secondary btn-block">Submit</button>
           </form>
+        </div>
+        <div class="col-md-6">
+          <h2>Earth places people have visited! <p class="text-muted">**earth only, please!</p></h2>
+          <div id="results">
+            <p id="list"></p>
+          </div>
         </div>
       </div>
     </div>
